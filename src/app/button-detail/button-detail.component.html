@@ -1,0 +1,7 @@
+<button class='btn btn-primary' (click)="onShowDetails($event)" > Show details </button>
+<p [hidden]="secretHidden">The secret is hidden here.</p>
+<p>{{ clickCounter }}</p>
+<p *ngFor="let logs of log" [ngStyle]="{backgroundColor: getColor(logs.counter>4)}" [ngClass]="{five: logs.counter > 4}">
+  {{logs.counter}} {{logs.timestamp}}
+</p>
+<!--<app-log-entry *ngFor="let logs of log"></app-log-entry>-->
